@@ -34,6 +34,6 @@ class ReminderSerializer(serializers.ModelSerializer):
 
     def validate(self, data):
         # Ensure at least one of lead or contact is provided
-        if not data.get('lead_d') and not data.get('contact_id'):
+        if not data.get('lead') and not data.get('contact'):
             raise serializers.ValidationError("Either 'lead' or 'contact' must be provided.")
         return data

@@ -44,7 +44,9 @@ INSTALLED_APPS = [
     'reminders',
     'corsheaders', 
 ]
-
+INSTALLED_APPS += [
+    'django_celery_beat',
+]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'corsheaders.middleware.CorsMiddleware',
